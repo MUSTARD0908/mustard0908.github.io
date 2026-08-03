@@ -4,29 +4,65 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
-  <title>AI Trader PAPER</title>
+  <title>AI Trader 스캘핑 상세보고서</title>
   <style>
-    :root { color-scheme: light; font-family: system-ui, -apple-system, "Noto Sans KR", sans-serif; }
-    body { margin: 0; background: #f4f7fb; color: #172033; }
-    main { max-width: 680px; margin: 0 auto; padding: 64px 20px; }
-    section { background: #fff; border-radius: 20px; padding: 32px; box-shadow: 0 12px 34px rgba(30, 48, 80, .10); }
-    h1 { margin: 0 0 12px; font-size: 30px; }
-    p { line-height: 1.7; }
-    .status { display: inline-block; padding: 7px 12px; border-radius: 999px; background: #e8f7ee; color: #176b3a; font-weight: 700; }
-    a { display: inline-block; margin-top: 10px; padding: 13px 18px; border-radius: 12px; background: #1769e0; color: #fff; text-decoration: none; font-weight: 700; }
-    small { display: block; margin-top: 24px; color: #667085; line-height: 1.6; }
+    :root{--ink:#152033;--muted:#69768a;--line:#e7ebf1;--paper:#f3f6fa;--blue:#1769e0;--green:#087a55;--green-bg:#e8f7f1;--red:#c43b47;--red-bg:#fff0f1;--amber:#8a6214;--amber-bg:#fff7dc}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,"Malgun Gothic",sans-serif}main{max-width:960px;margin:auto;padding:34px 18px 52px}header{padding:7px 3px 4px}.eyebrow{margin:0 0 9px;color:var(--blue);font-size:12px;font-weight:800;letter-spacing:1.15px}h1{font-size:32px;letter-spacing:-1.5px;margin:0}.time{color:var(--muted);font-size:14px;margin:11px 0 0}.badge{display:inline-block;margin-top:14px;padding:7px 11px;border-radius:999px;background:var(--green-bg);color:var(--green);font-size:13px;font-weight:800}.notice{margin-top:18px;padding:12px 14px;border-radius:11px;background:var(--amber-bg);color:var(--amber);font-size:13px;line-height:1.55}.summary{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;margin:24px 0}.card,section{background:#fff;border:1px solid var(--line);border-radius:16px}.card{padding:17px}.card span{display:block;color:var(--muted);font-size:12px;margin-bottom:8px}.card b{font-size:25px;letter-spacing:-1px}.card small{color:var(--muted);font-size:12px;margin-left:3px}.card.profit{background:var(--green-bg);border-color:#ccebdc}.card.loss{background:var(--red-bg);border-color:#f5d2d5}.positive{color:var(--green)!important}.negative{color:var(--red)!important}section{padding:21px;margin-top:14px;overflow:hidden}.title{display:flex;gap:11px;margin-bottom:15px}.title>span{color:var(--blue);font-weight:800;font-size:12px;margin-top:3px}h2{font-size:19px;margin:0}.subtitle{color:var(--muted);font-size:13px;line-height:1.45;margin:4px 0 0}.wrap{overflow:auto}table{border-collapse:collapse;width:100%;min-width:720px;font-size:13px}th{text-align:left;color:var(--muted);font-size:11px;padding:10px 8px;border-bottom:1px solid var(--line);white-space:nowrap}td{padding:12px 8px;border-bottom:1px solid var(--line);vertical-align:top}tr:last-child td{border:0}.name{font-weight:800}.code,.minor{display:block;color:var(--muted);font-size:11px;margin-top:3px}.reason{max-width:280px;line-height:1.45}.empty{color:var(--muted);text-align:center;padding:22px 5px 8px}.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:0 24px}.fact{display:flex;justify-content:space-between;gap:18px;padding:11px 0;border-bottom:1px solid var(--line);font-size:13px}.fact:nth-last-child(-n+2){border-bottom:0}.fact span{color:var(--muted)}footer{text-align:center;color:var(--muted);font-size:12px;line-height:1.65;margin-top:25px}.loading{opacity:.55}@media(max-width:720px){main{padding:25px 12px 42px}h1{font-size:27px}.summary{grid-template-columns:repeat(2,1fr);gap:8px}.card{padding:14px 12px}.card b{font-size:21px}section{padding:17px 13px}.facts{grid-template-columns:1fr}.fact:nth-last-child(2){border-bottom:1px solid var(--line)}}
   </style>
 </head>
-<body>
-  <main>
-    <section>
-      <span class="status">정상 연결</span>
-      <h1>AI Trader PAPER</h1>
-      <p>카카오톡 보고 링크가 정상적으로 연결되었습니다.</p>
-      <p>매일의 거래 수, 승률, 비용, 순손익과 운용자금은 카카오톡 메시지 본문에서 확인할 수 있습니다.</p>
-      <a href="https://data.krx.co.kr/contents/MDC/MAIN/main/index.cmd">KRX 데이터 확인</a>
-      <small>PAPER 검증 전용입니다. 실제 주문은 실행하지 않습니다. 인증키·계좌정보 등 민감정보는 이 페이지에 저장하지 않습니다.</small>
-    </section>
-  </main>
-</body>
-</html>
+<body><main class="loading" id="app">
+  <header>
+    <p class="eyebrow">AI TRADER · SCALPING PAPER</p>
+    <h1>스캘핑 일일 상세보고서</h1>
+    <p class="time" id="time">최신 PAPER 결과를 불러오는 중입니다.</p>
+    <span class="badge" id="status">확인 중</span>
+    <p class="notice" id="notice">이 페이지는 가상매매 검증 결과입니다. 실제 주문이나 계좌정보는 포함하지 않습니다.</p>
+  </header>
+
+  <div class="summary">
+    <article class="card"><span>시작 운용자금</span><b id="initial">0</b><small>원</small></article>
+    <article class="card"><span>종료 평가금액</span><b id="ending">0</b><small>원</small></article>
+    <article class="card" id="profitCard"><span>비용 후 순손익</span><b id="profit">0</b><small>원</small></article>
+    <article class="card"><span>기준자금 수익률</span><b id="returnRate">0.00</b><small>%</small></article>
+    <article class="card"><span>감시 종목</span><b id="watchCount">0</b><small>종목</small></article>
+    <article class="card"><span>진입 / 청산</span><b id="entriesTrades">0 / 0</b><small>회</small></article>
+    <article class="card"><span>승 / 패 · 승률</span><b id="winLoss">0 / 0</b><small id="winRate">0.00%</small></article>
+    <article class="card"><span>거래비용</span><b id="cost">0</b><small>원</small></article>
+  </div>
+
+  <section>
+    <div class="title"><span>01</span><div><h2>오늘의 진입·청산</h2><p class="subtitle">종목별 가상 매수·매도와 비용 후 결과입니다.</p></div></div>
+    <div id="trades"></div>
+  </section>
+  <section>
+    <div class="title"><span>02</span><div><h2>감시 종목 분석</h2><p class="subtitle">선정 점수, 감시 결과와 진입하지 못한 주요 조건을 확인합니다.</p></div></div>
+    <div id="candidates"></div>
+  </section>
+  <section>
+    <div class="title"><span>03</span><div><h2>자금·데이터 점검</h2><p class="subtitle">같은 자금을 여러 번 회전한 총 매수금액과 실제 최대 투입금액은 구분합니다.</p></div></div>
+    <div class="facts">
+      <div class="fact"><span>총 매수금액</span><b id="totalBuy">0원</b></div>
+      <div class="fact"><span>최대 동시 투입</span><b id="required">0원</b></div>
+      <div class="fact"><span>시장자료 상태</span><b id="market">-</b></div>
+      <div class="fact"><span>운용 형태</span><b>가상매매 · 실주문 없음</b></div>
+    </div>
+  </section>
+  <footer>공개되는 내용은 PAPER 종목과 가상거래 결과뿐입니다.<br>계좌번호·인증키·토큰·실제 잔고는 저장하거나 표시하지 않습니다.</footer>
+</main>
+<script>
+const q=new URLSearchParams(location.search),date=q.get('date');
+const validDate=/^\d{4}-\d{2}-\d{2}$/.test(date||'');
+const url=validDate?`reports/${date}.json`:'report.json';
+const e=s=>String(s??'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+const n=v=>Number(v||0), money=v=>Math.round(n(v)).toLocaleString('ko-KR');
+const pct=v=>`${n(v)>=0?'+':''}${n(v).toFixed(2)}%`;
+const clock=v=>{if(!v)return '-';const d=new Date(v);return Number.isNaN(d.getTime())?e(v):d.toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit'})};
+const tone=(el,v)=>{el.classList.toggle('positive',n(v)>0);el.classList.toggle('negative',n(v)<0)};
+function tradeTable(rows){if(!rows.length)return '<p class="empty">오늘은 진입·청산 거래가 없습니다.</p>';return `<div class="wrap"><table><thead><tr><th>종목</th><th>진입 → 청산</th><th>수량</th><th>보유시간</th><th>순수익률</th><th>순손익</th><th>비용</th><th>청산 이유</th></tr></thead><tbody>${rows.map(r=>`<tr><td><span class="name">${e(r.name)}</span><span class="code">${e(r.symbol)}</span></td><td>${clock(r.entryTime)} ${money(r.entryPrice)}원<br>→ ${clock(r.exitTime)} ${money(r.exitPrice)}원</td><td>${money(r.quantity)}주</td><td>${n(r.holdingMinutes).toFixed(0)}분</td><td class="${n(r.netProfitRate)>=0?'positive':'negative'}">${pct(r.netProfitRate)}</td><td class="${n(r.netProfitLoss)>=0?'positive':'negative'}"><b>${n(r.netProfitLoss)>=0?'+':''}${money(r.netProfitLoss)}원</b></td><td>${money(r.totalCost)}원</td><td>${e(r.exitReason)||'-'}</td></tr>`).join('')}</tbody></table></div>`}
+function candidateTable(rows){if(!rows.length)return '<p class="empty">감시 종목 기록이 없습니다.</p>';return `<div class="wrap"><table><thead><tr><th>순위·종목</th><th>경로·점수</th><th>진입/거래</th><th>손익</th><th>진입 근접도</th><th>선정 이유</th><th>미충족 주요 조건</th></tr></thead><tbody>${rows.map(r=>`<tr><td><b>${e(r.rank)}위 · ${e(r.name)}</b><span class="code">${e(r.symbol)}</span></td><td>${e(r.strategyRoute)||'-'} · ${n(r.score).toFixed(0)}점</td><td>${e(r.entries)} / ${e(r.trades)}</td><td class="${n(r.netProfitLoss)>=0?'positive':'negative'}">${n(r.netProfitLoss)>=0?'+':''}${money(r.netProfitLoss)}원</td><td>${n(r.nearestProximityRate).toFixed(1)}%</td><td class="reason">${e(r.selectionReason)||'-'}</td><td class="reason">${(r.unmetConditions||[]).map(e).join(' · ')||'진입 완료 또는 세부 사유 없음'}</td></tr>`).join('')}</tbody></table></div>`}
+fetch(`${url}?t=${Date.now()}`).then(r=>{if(!r.ok)throw Error();return r.json()}).then(d=>{
+  const s=d.summary||{};document.getElementById('time').textContent=`${e(d.reportDate)} 기준 · ${clock(d.startedAt)}~${clock(d.updatedAt)} · 게시 ${clock(d.generatedAt)}`;document.getElementById('status').textContent=d.stateLabel||d.state||'상태 미확인';
+  if(d.state!=='completed'||d.reason||d.marketDataWarning){const messages=[d.reason,d.marketDataWarning].filter(Boolean);document.getElementById('notice').textContent=messages.join(' · ')||'완료되지 않은 PAPER 결과입니다.'}
+  document.getElementById('initial').textContent=money(s.initialCapital);document.getElementById('ending').textContent=money(s.endingEquity);document.getElementById('profit').textContent=`${n(s.netProfitLoss)>=0?'+':''}${money(s.netProfitLoss)}`;tone(document.getElementById('profit'),s.netProfitLoss);document.getElementById('profitCard').classList.add(n(s.netProfitLoss)>=0?'profit':'loss');
+  document.getElementById('returnRate').textContent=pct(s.returnOnInitialCapital).replace('%','');tone(document.getElementById('returnRate'),s.returnOnInitialCapital);document.getElementById('watchCount').textContent=money(s.watchCount);document.getElementById('entriesTrades').textContent=`${money(s.entries)} / ${money(s.trades)}`;document.getElementById('winLoss').textContent=`${money(s.wins)} / ${money(s.losses)}`;document.getElementById('winRate').textContent=`${n(s.winRate).toFixed(2)}%`;document.getElementById('cost').textContent=money(s.totalCost);document.getElementById('totalBuy').textContent=`${money(s.totalBuyAmount)}원`;document.getElementById('required').textContent=`${money(s.requiredCapital)}원`;document.getElementById('market').textContent=d.marketDataStatus||'-';document.getElementById('trades').innerHTML=tradeTable(d.trades||[]);document.getElementById('candidates').innerHTML=candidateTable(d.candidates||[]);document.getElementById('app').classList.remove('loading');
+}).catch(()=>{document.getElementById('status').textContent='보고서 없음';document.getElementById('notice').textContent=validDate?'해당 날짜의 상세보고서를 찾을 수 없습니다.':'최신 상세보고서를 불러오지 못했습니다.';document.getElementById('app').classList.remove('loading')});
+</script></body></html>
