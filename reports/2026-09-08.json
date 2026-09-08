@@ -1,19 +1,27 @@
 {
-  "generatedAt": "2026-09-08T09:15+09:00",
+  "generatedAt": "2026-09-08T15:30+09:00",
   "reportDate": "2026-09-08",
-  "startedAt": "",
-  "updatedAt": "2026-09-08T09:15:05+09:00",
-  "state": "failed",
-  "stateLabel": "실행 실패",
+  "startedAt": "2026-09-08T15:11:05+09:00",
+  "updatedAt": "2026-09-08T15:30:00+09:00",
+  "state": "completed",
+  "stateLabel": "정상 완료",
   "marketDataStatus": "ready",
   "marketDataWarning": "",
-  "strategyProfile": "",
-  "reason": "ProviderUnavailableError: Market Data Core 시작 불가: Research Universe가 비어 있습니다.",
+  "strategyProfile": "data-collection-only",
+  "reason": "장 종료까지 후보 없음",
   "partialResult": false,
   "isRealOrder": false,
   "summary": {
     "watchCount": 0,
-    "watchCounts": {},
+    "watchCounts": {
+      "initial_watchlist_count": 0,
+      "final_watchlist_count": 0,
+      "total_unique_watched": 0,
+      "eligible_candidate_count": 0,
+      "observation_candidate_count": 0,
+      "fully_received_realtime_count": 0,
+      "numeric_conversion_errors": []
+    },
     "entries": 0,
     "trades": 0,
     "wins": 0,
@@ -30,7 +38,10 @@
   "environment": {
     "discoveryMode": "",
     "rescanSeconds": 0,
-    "stageCounts": {},
+    "stageCounts": {
+      "monitored": 0,
+      "received_trade_and_orderbook": 0
+    },
     "liveRiserCoverage": {},
     "realtimeReceiveSuccessPct": 0.0,
     "scanFailures": 0,
