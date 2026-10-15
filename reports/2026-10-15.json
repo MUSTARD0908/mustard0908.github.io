@@ -1,0 +1,57 @@
+{
+  "generatedAt": "2026-10-15T15:30+09:00",
+  "reportDate": "2026-10-15",
+  "startedAt": "2026-10-15T09:00:05+09:00",
+  "updatedAt": "2026-10-15T15:30:00+09:00",
+  "state": "completed",
+  "stateLabel": "정상 완료",
+  "marketDataStatus": "ready",
+  "marketDataWarning": "",
+  "strategyProfile": "data-collection-only",
+  "reason": "장 종료까지 후보 없음",
+  "partialResult": false,
+  "isRealOrder": false,
+  "performanceValid": false,
+  "performanceLabel": "데이터 품질 문제로 전략 성과 평가 제외",
+  "officialCumulativePerformanceIncluded": false,
+  "summary": {
+    "watchCount": 0,
+    "watchCounts": {
+      "initial_watchlist_count": 0,
+      "final_watchlist_count": 0,
+      "total_unique_watched": 0,
+      "eligible_candidate_count": 0,
+      "observation_candidate_count": 0,
+      "fully_received_realtime_count": 0,
+      "numeric_conversion_errors": []
+    },
+    "entries": 0,
+    "trades": 0,
+    "wins": 0,
+    "losses": 0,
+    "winRate": 0.0,
+    "totalCost": 0.0,
+    "netProfitLoss": 0.0,
+    "officialNetProfitLoss": null,
+    "totalBuyAmount": 0.0,
+    "requiredCapital": 0.0,
+    "initialCapital": 0.0,
+    "endingEquity": 0.0,
+    "returnOnInitialCapital": 0.0
+  },
+  "environment": {
+    "discoveryMode": "",
+    "rescanSeconds": 0,
+    "stageCounts": {
+      "monitored": 0,
+      "received_trade_and_orderbook": 0
+    },
+    "liveRiserCoverage": {},
+    "realtimeReceiveSuccessPct": 0.0,
+    "scanFailures": 0,
+    "acceptance": {},
+    "scanHistory": []
+  },
+  "trades": [],
+  "candidates": []
+}
