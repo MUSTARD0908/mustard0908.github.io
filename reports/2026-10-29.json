@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T15:34+09:00",
+  "generatedAt": "2026-11-04T08:50+09:00",
   "reportDate": "2026-10-29",
   "startedAt": "2026-10-29T09:00:11+09:00",
   "updatedAt": "2026-10-29T15:32:17+09:00",
@@ -8,7 +8,7 @@
   "marketDataStatus": "ready",
   "marketDataWarning": "",
   "strategyProfile": "data-collection-only",
-  "reason": "",
+  "reason": "PAPER 및 후처리 완료",
   "partialResult": false,
   "isRealOrder": false,
   "performanceValid": false,
